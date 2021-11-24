@@ -9,6 +9,7 @@ public class Mamifero extends Animal {
 	private boolean pelaje;
 	private int patas;
 	
+	public Mamifero() {}
 	public static int cantidadMamiferos() {
 		return leones + caballos;
 	}

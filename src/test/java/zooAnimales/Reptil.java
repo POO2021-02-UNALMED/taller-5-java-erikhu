@@ -9,6 +9,8 @@ public class Reptil extends Animal {
 	private String colorEscamas;
 	private int largoCola;
 	
+	public Reptil() {}
+	
 	public static int cantidadReptiles() {
 		return iguanas + serpientes;
 	}

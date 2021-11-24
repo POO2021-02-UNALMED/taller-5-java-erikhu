@@ -9,6 +9,8 @@ public class Pez extends Animal {
 	private String colorEscamas;
 	private int cantidadAletas;
 	
+	public Pez() {}
+	
 	public static int cantidadPeces() {
 		return salmones + bacalaos;
 	}

@@ -28,7 +28,8 @@ public class Animal {
 		return "Mamiferos: "+ Mamifero.cantidadMamiferos()+"\n"
 				+ "Aves: "+Ave.cantidadAves()+"\n"
 				+ "Reptiles: "+Reptil.cantidadReptiles()+"\n"
-				+ "Peces: "+ Pez.cantidadPeces();
+				+ "Peces: "+ Pez.cantidadPeces()+"\n"
+				+ "Anfibios: "+ Anfibio.cantidadAnfibios();
 	}
 	
 	public String toString() {

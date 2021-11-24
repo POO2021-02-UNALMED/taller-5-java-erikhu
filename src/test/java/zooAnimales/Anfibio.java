@@ -3,6 +3,7 @@ package zooAnimales;
 public class Anfibio extends Animal {
 	public Anfibio(String nombre, int edad, String habitat, String sexo) {
 		super(nombre, edad, habitat, sexo);
+		Animal.totalAnimales++;
 	}
 
 	public static int ranas;
@@ -10,14 +11,15 @@ public class Anfibio extends Animal {
 	private String colorPiel;
 	private boolean venenoso;
 	
-	public Anfibio() {}
+	public Anfibio() {
+		Animal.totalAnimales++;
+	}
 	
 	public static int cantidadAnfibios() {
 		return ranas + salamandras;
 	}
 	
 	public static Anfibio crearRana(String nombre, int edad,  String genero) {
-		Animal.totalAnimales++;
 		ranas++;
 		Anfibio anfibio = new Anfibio(nombre, edad, "selva", genero);
 		anfibio.setColorPiel("rojo");
@@ -26,7 +28,6 @@ public class Anfibio extends Animal {
 	}
 	
 	public static Anfibio crearSalamandra(String nombre, int edad, String genero) {
-		Animal.totalAnimales++;
 		salamandras++;
 		Anfibio anfibio = new Anfibio(nombre, edad,"selva", genero);
 		anfibio.setColorPiel("negro y amarillo");

@@ -2,6 +2,7 @@ package zooAnimales;
 public class Pez extends Animal {
 	public Pez(String nombre, int edad, String habitat, String sexo) {
 		super(nombre, edad, habitat, sexo);
+		Animal.totalAnimales++;
 	}
 
 	public static int salmones;
@@ -9,7 +10,9 @@ public class Pez extends Animal {
 	private String colorEscamas;
 	private int cantidadAletas;
 	
-	public Pez() {}
+	public Pez() {
+		Animal.totalAnimales++;
+	}
 	
 	public static int cantidadPeces() {
 		return salmones + bacalaos;
@@ -17,7 +20,6 @@ public class Pez extends Animal {
 	
 	public static Pez crearSalmon(String nombre, int edad, String genero) {
 		salmones++;		
-		Animal.totalAnimales++;
 		Pez pez = new Pez(nombre, edad,"oceano", genero);
 		pez.setColorEscamas("gris");
 		pez.setCantidadAletas(6);
@@ -26,7 +28,6 @@ public class Pez extends Animal {
 	
 	public static Pez crearBacalao(String nombre, int edad, String genero) {
 		bacalaos++;
-		Animal.totalAnimales++;
 		Pez pez = new Pez(nombre, edad,"oceano", genero);
 		pez.setColorEscamas("gris");
 		pez.setCantidadAletas(6);

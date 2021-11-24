@@ -2,6 +2,7 @@ package zooAnimales;
 public class Reptil extends Animal {
 	public Reptil(String nombre, int edad, String habitat, String sexo) {
 		super(nombre, edad, habitat, sexo);
+		Animal.totalAnimales++;
 	}
 
 	public static int iguanas;
@@ -9,14 +10,15 @@ public class Reptil extends Animal {
 	private String colorEscamas;
 	private int largoCola;
 	
-	public Reptil() {}
+	public Reptil() {
+		Animal.totalAnimales++;
+	}
 	
 	public static int cantidadReptiles() {
 		return iguanas + serpientes;
 	}
 	
 	public static Reptil crearIguana(String nombre, int edad, String genero) {
-		Animal.totalAnimales++;
 		iguanas++;
 		Reptil reptil = new Reptil(nombre, edad,"humedal", genero);
 		reptil.setColorEscamas("verde");
@@ -25,7 +27,6 @@ public class Reptil extends Animal {
 	}
 	
 	public static Reptil crearSerpiente(String nombre, int edad, String genero) {
-		Animal.totalAnimales++;
 		serpientes++;
 		Reptil reptil = new Reptil(nombre, edad,"jungla", genero);
 		reptil.setColorEscamas("blanco");

@@ -2,6 +2,7 @@ package zooAnimales;
 public class Mamifero extends Animal {
 	public Mamifero(String nombre, int edad, String habitat, String sexo) {
 		super(nombre, edad, habitat, sexo);
+		Animal.totalAnimales++;
 	}
 	
 	public static int caballos;
@@ -9,13 +10,14 @@ public class Mamifero extends Animal {
 	private boolean pelaje;
 	private int patas;
 	
-	public Mamifero() {}
+	public Mamifero() {
+		Animal.totalAnimales++;
+	}
 	public static int cantidadMamiferos() {
 		return leones + caballos;
 	}
 	
 	public static Mamifero crearCaballo(String nombre, int edad, String genero) {
-		Animal.totalAnimales++;
 		caballos++;
 		Mamifero mamifero = new Mamifero(nombre, edad,"pradera", genero);
 		mamifero.setPelaje(true);
@@ -24,7 +26,6 @@ public class Mamifero extends Animal {
 	}
 	
 	public static Mamifero crearLeon(String nombre, int edad, String genero) {
-		Animal.totalAnimales++;
 		leones++;
 		Mamifero mamifero = new Mamifero(nombre, edad,"selva", genero);
 		mamifero.setPelaje(true);

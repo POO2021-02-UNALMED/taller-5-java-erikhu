@@ -46,4 +46,10 @@ public class Ave extends Animal {
 	public void setColorPlumas(String colorPlumas) {
 		this.colorPlumas = colorPlumas;
 	}
+	
+	@Override
+	public String toString() {
+		return "Mi nombre es "+this.getNombre()+", tengo una edad de "+this.getEdad()+", habito en "+this.getHabitat()+" y mi genero es\n"
+				+ this.getGenero();	
+		}
 }

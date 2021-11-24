@@ -4,6 +4,11 @@ public class Ave extends Animal {
 		super(nombre, edad, habitat, sexo);
 		Animal.totalAnimales++;
 	}
+	public Ave(String nombre, int edad, String habitat, String sexo, String colorPlumas) {
+		super(nombre, edad, habitat, sexo);
+		this.colorPlumas = colorPlumas;
+		Animal.totalAnimales++;
+	}
 	public static int halcones;
 	public static int aguilas;
 	private String colorPlumas;

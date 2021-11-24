@@ -5,6 +5,13 @@ public class Reptil extends Animal {
 		Animal.totalAnimales++;
 	}
 
+	public Reptil(String nombre, int edad, String habitat, String sexo, String colorEscamas, int largoCola) {
+		super(nombre, edad, habitat, sexo);
+		this.largoCola = largoCola;
+		this.colorEscamas = colorEscamas;
+		Animal.totalAnimales++;
+	}
+	
 	public static int iguanas;
 	public static int serpientes;
 	private String colorEscamas;

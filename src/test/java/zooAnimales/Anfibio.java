@@ -5,6 +5,13 @@ public class Anfibio extends Animal {
 		super(nombre, edad, habitat, sexo);
 		Animal.totalAnimales++;
 	}
+	
+	public Anfibio(String nombre, int edad, String habitat, String sexo, String colorPiel, boolean venenoso) {
+		super(nombre, edad, habitat, sexo);
+		this.colorPiel = colorPiel;
+		this.venenoso = venenoso;
+		Animal.totalAnimales++;
+	}
 
 	public static int ranas;
 	public static int salamandras;

@@ -4,6 +4,12 @@ public class Pez extends Animal {
 		super(nombre, edad, habitat, sexo);
 		Animal.totalAnimales++;
 	}
+	public Pez(String nombre, int edad, String habitat, String sexo, String colorEscamas, int cantidadAletas) {
+		super(nombre, edad, habitat, sexo);
+		this.colorEscamas = colorEscamas;
+		this.cantidadAletas = cantidadAletas;
+		Animal.totalAnimales++;
+	}
 
 	public static int salmones;
 	public static int bacalaos;

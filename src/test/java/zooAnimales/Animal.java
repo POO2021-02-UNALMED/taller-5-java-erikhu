@@ -32,8 +32,8 @@ public class Animal {
 	}
 	
 	public String toString() {
-	return "Mi nombre es #nombre, tengo una edad de #edad, habito en #habitat y mi genero es\n"
-			+ "#genero, la zona en la que me ubico es #zona, en el #zoo";	
+	return "Mi nombre es "+this.nombre+", tengo una edad de "+this.edad+", habito en "+this.habitat+" y mi genero es\n"
+			+ this.genero+", la zona en la que me ubico es "+this.zona.getNombre()+", en el "+this.zona.getZoo().getNombre();	
 	}
 
 	public String getNombre() {
